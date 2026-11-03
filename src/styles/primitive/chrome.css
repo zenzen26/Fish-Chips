@@ -1,0 +1,10 @@
+/* Site chrome: floating header pills and nav links. */
+@layer components {
+  .pill {
+    @apply rounded-full border-2 border-black bg-white shadow-hard-sm;
+  }
+
+  .nav-link {
+    @apply rounded-full px-4 py-2 text-sm font-bold transition-colors duration-200 hover:bg-fog aria-[current=true]:bg-yellow;
+  }
+}

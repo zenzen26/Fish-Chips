@@ -1,0 +1,10 @@
+{
+  "links": [
+    { "label": "Home", "href": "/", "id": "hero" },
+    { "label": "About", "href": "/#about", "id": "about" },
+    { "label": "Menu", "href": "/#picks", "id": "picks" },
+    { "label": "Reviews", "href": "/#testimonials", "id": "testimonials" },
+    { "label": "Contact", "href": "/#contact", "id": "contact" }
+  ],
+  "cta": { "label": "Order ahead", "href": "/#contact" }
+}

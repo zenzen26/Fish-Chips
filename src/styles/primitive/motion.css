@@ -1,0 +1,12 @@
+/* Shared motion. Independent transform properties (translate/rotate/scale) so a static tilt and a bob never fight. */
+@layer components {
+  .fish-bob {
+    animation: fish-bob 3.6s ease-in-out infinite alternate;
+  }
+
+  @keyframes fish-bob {
+    to {
+      translate: 0 -0.6rem;
+    }
+  }
+}

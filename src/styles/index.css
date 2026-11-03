@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+@import './primitive/typography.css';
+@import './primitive/pattern.css';
+@import './primitive/button.css';
+@import './primitive/motion.css';
+@import './primitive/form.css';
+@import './primitive/chrome.css';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-black font-body text-[clamp(1rem,1.2vw,1.125rem)] leading-relaxed antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-normal;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 3px;
+  }
+
+  .bg-blue :focus-visible,
+  .bg-black :focus-visible,
+  .grid-bg :focus-visible {
+    @apply outline-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

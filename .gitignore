@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+*.log
+
+# Playwright MCP output (screenshots, logs). Local only.
+.playwright-mcp/

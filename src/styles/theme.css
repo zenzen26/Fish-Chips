@@ -1,0 +1,25 @@
+@theme {
+  --color-blue: #004aad;
+  --color-yellow: #ffc83a;
+  --color-fog: #e5e6e3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Dingo Stamp is not on Google Fonts: used when installed or added via @font-face. Titan One is the stand-in. */
+  --font-display: 'Dingo Stamp', 'Titan One', system-ui, sans-serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+
+  /* Ultrawide / dual-monitor: 1920px and wider. Default Tailwind stops at 2xl. */
+  --breakpoint-6xl: 120rem;
+
+  /* Hard offset shadows only, never soft blurs. */
+  --shadow-hard-sm: 3px 3px 0 var(--color-black);
+  --shadow-hard: 6px 6px 0 var(--color-black);
+  --shadow-hard-lg: 10px 10px 0 var(--color-black);
+}
+
+:root {
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-spring: linear(0, 0.0036, 0.0141 2%, 0.0575 4.1%, 0.1191 6.1%, 0.2199 8.6%, 0.4117 12.3%, 0.5683 15.5%, 0.7197 19.4%, 0.8404 23.7%, 0.9328 28.6%, 0.99 33.6%, 1.0178 38.4%, 1.0273 42.9%, 1.0238 47.5%, 1.0136 54.1%, 1.0045 62.6%, 1.0006 72.4%, 1);
+  --ease-bounce: linear(0, 0.2 6%, 0.65 13%, 0.98 20%, 1.15 27%, 1.17 32%, 1.08 41%, 0.97 51%, 0.97 58%, 1.01 70%, 1);
+}

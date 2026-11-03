@@ -1,0 +1,26 @@
+{
+  "name": "tide-and-chips",
+  "version": "1.0.0",
+  "description": "Tide & Chips - demo site for a made-up seaside fish and chips shop",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "private": true,
+  "type": "module"
+}

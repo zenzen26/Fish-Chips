@@ -1,0 +1,32 @@
+/* Decorative surfaces. .grid-bg: blue squared paper (two crossed white lines per cell, smaller cells on phones). */
+@layer components {
+  .grid-bg {
+    @apply bg-blue [--cell:2.5rem] md:[--cell:3.5rem] 2xl:[--cell:4rem];
+    --grid-line: --alpha(var(--color-white) / 25%);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1.5px, transparent 1.5px),
+      linear-gradient(to bottom, var(--grid-line) 1.5px, transparent 1.5px);
+    background-size: var(--cell) var(--cell);
+  }
+
+  /* Strip of sticky tape: slightly see-through white with torn zig-zag ends. */
+  .tape {
+    @apply bg-white/90;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      calc(100% - 6px) 16%,
+      100% 33%,
+      calc(100% - 6px) 50%,
+      100% 66%,
+      calc(100% - 6px) 83%,
+      100% 100%,
+      0 100%,
+      6px 83%,
+      0 66%,
+      6px 50%,
+      0 33%,
+      6px 16%
+    );
+  }
+}

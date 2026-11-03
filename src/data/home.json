@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "lines": [
+      "Fish",
+      "and",
+      "Chips"
+    ],
+    "noteLeft": "Golden fries",
+    "noteRight": "Soft juicy fish",
+    "plateAlt": "Battered fish and chips with lemon wedges and tartare sauce"
+  },
+  "about": {
+    "title": [
+      "Meet",
+      "Marlo"
+    ],
+    "paragraphs": [
+      "Marlo grew up above a harbour-side chip shop, peeling potatoes before school and learning to judge a batter by the sound it makes in the fryer. The pufferfish on our sign was the first thing Marlo ever doodled on an order pad, and it stuck.",
+      "After years cooking in other people's kitchens, Marlo opened Tide & Chips with one rule: fry it fresh, serve it hot, and never rush the chips. Come by, say hello and ask for the batter recipe. You won't get it, but you will get an extra lemon wedge."
+    ],
+    "demoNote": "Demo story: Marlo and Tide & Chips are made up.",
+    "puffAlt": "A pufferfish with big golden eyes, the shop mascot"
+  },
+  "picks": {
+    "title": "Today's pick",
+    "lede": "Three plates the regulars keep coming back for. Fried to order, served hot, and usually gone before closing time.",
+    "items": [
+      {
+        "name": "Lorem Classic Fish & Chips",
+        "price": 12.9
+      },
+      {
+        "name": "Ipsum Golden Combo",
+        "price": 16.5
+      },
+      {
+        "name": "Dolor Crispy Box",
+        "price": 9.9
+      }
+    ],
+    "cta": {
+      "label": "See full menu",
+      "to": "/products"
+    },
+    "demoNote": "Demo menu: names and prices are made up.",
+    "foodAlt": "Battered fish and chips with tartare sauce and a lemon wedge"
+  },
+  "testimonials": {
+    "title": "Kind words",
+    "lede": "A few notes from the folks who sat down, ate up and left us the crumbs.",
+    "items": [
+      {
+        "quote": "I came for the chips and stayed for the batter. Crispy outside, soft inside, and the lemon wedge was exactly the right size. Rare.",
+        "name": "Jo",
+        "role": "Friday regular",
+        "rating": 5
+      },
+      {
+        "quote": "Best fish and chips by the water. We ate on the wall and the seagulls respected us.",
+        "name": "Priya",
+        "role": "Weekend walker",
+        "rating": 5
+      },
+      {
+        "quote": "The pufferfish on the sign made my kid laugh. The chips made my kid quiet. Perfect.",
+        "name": "Sam",
+        "role": "Dad of two",
+        "rating": 5
+      },
+      {
+        "quote": "Fast, hot and not greasy. Ordered extra tartare and have no regrets.",
+        "name": "Leo",
+        "role": "Lunch break",
+        "rating": 5
+      }
+    ],
+    "demoNote": "Demo quotes: names and reviews are made up.",
+    "fishAlt": "A blue crayon drawing of a fish"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "lede": "Booking a party, ordering for the office or just want to say hi? Pull up a chair, fill in the plate and we'll get back to you.",
+    "demoNote": "Demo contact details: the phone number, email and form are made up.",
+    "fields": {
+      "name": "Your name",
+      "email": "Email",
+      "type": "Enquiry type",
+      "message": "Message"
+    },
+    "enquiryTypes": [
+      "Catering",
+      "General",
+      "Takeaways",
+      "Events",
+      "Reservations"
+    ],
+    "defaultType": "General",
+    "submitLabel": "Send enquiry",
+    "sentMessage": "Opening your email app...",
+    "plateAlt": "A bright yellow dinner plate"
+  }
+}

@@ -1,9 +1,7 @@
 @layer components {
-  /* Hover/focus: silky glossy sheen sweeps across the button, a soft glow blooms around it and it lifts a touch.
-     Press: drops flat. --glow is the per-variant glow colour. */
+  /* Hover/focus: a silky glossy sheen sweeps across the button and it lifts a touch. Press: drops flat. */
   .btn {
     @apply relative isolate inline-flex min-h-11 items-center justify-center overflow-hidden rounded-full border-2 border-black px-8 py-3 font-body text-sm font-extrabold uppercase tracking-widest shadow-hard-sm transition-[translate,box-shadow] duration-500 ease-(--ease-fluid) active:translate-x-[3px] active:translate-y-[3px];
-    --glow: --alpha(var(--color-yellow) / 85%);
   }
 
   .btn::after {
@@ -17,9 +15,6 @@
   .btn:hover,
   .btn:focus-visible {
     @apply -translate-y-0.5;
-    box-shadow:
-      var(--shadow-hard-sm),
-      0 0 1.75rem 0.25rem var(--glow);
   }
 
   .btn:hover::after,
@@ -37,6 +32,5 @@
 
   .btn-ink {
     @apply bg-black text-white;
-    --glow: --alpha(var(--color-white) / 70%);
   }
 }

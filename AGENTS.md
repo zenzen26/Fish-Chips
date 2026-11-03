@@ -41,7 +41,7 @@ Icons: `components/primitive/Icon.jsx` is the one icon set (clock, phone, mail, 
 
 Chrome: `components/layout/Header.jsx` (floating pill header: status pill, centred nav pill with CTA and mobile menu, copy-email pill; nav links in `src/data/nav.json`) and `Footer.jsx` (black footer; site details, portfolio and GitHub links in `src/data/site.json`). Styles: `styles/primitive/chrome.css` (`.pill`, `.nav-link`).
 
-Buttons: `Button` (`components/primitive/Button.jsx`, styles in `styles/primitive/button.css`): `to` = router link, `href` = anchor (silky glossy sheen sweep and soft glow on hover, flat press on click). Only the `primary` variant exists so far.
+Buttons: `Button` (`components/primitive/Button.jsx`, styles in `styles/primitive/button.css`): `to` = router link, `href` = anchor (silky glossy sheen sweep on hover, flat press on click). Only the `primary` variant exists so far.
 
 Patterns: `.grid-bg` (blue squared paper, the only grid) and `.tape` (the "AND" label) in
 `styles/primitive/pattern.css`. Images are looked up by filename with `image('name')` from

@@ -27,13 +27,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative isolate overflow-clip bg-white">
+    <section id="contact" aria-labelledby="contact-title" className="relative isolate -mt-px overflow-clip bg-white">
       <img
         src={image('red-checkered-cloth')}
         alt=""
         width="1290"
         height="864"
-        className="absolute left-0 top-2 -z-10 w-[min(62%,20rem)] -scale-y-100 lg:w-[min(30vw,32rem)]"
+        className="absolute left-0 top-2 -z-10 w-[min(62%,20rem)] -scale-y-100 [mask-image:linear-gradient(to_right,black_66%,transparent_75%)] lg:w-[min(30vw,32rem)] lg:[mask-image:none]"
         {...reveal('fade', 0.1)}
       />
       <img

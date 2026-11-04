@@ -19,12 +19,12 @@ One route (`/`) built from five sections, with a floating header and a black foo
 
 Details worth knowing:
 
-- The enquiry form has no server. Submitting builds a `mailto:` link, so it opens the visitor's email app.
+- The enquiry form is a demo with no server: the send button is disabled and shows a "Demo form" tooltip.
 - The enquiry type is a custom accessible drop-down (keyboard, mouse and touch) instead of the browser's default list.
 - Sections animate in on scroll, the section edges are waves and animated "bite" shapes instead of straight lines, and
   the cursors are custom fish and rubber-hose drawings. Every animation is switched off for visitors who prefer
   reduced motion.
-- Buttons that have no page yet show a "Demo menu" tooltip instead of navigating.
+- Buttons that have no page yet ("See full menu", "Send enquiry") show a demo tooltip instead of acting.
 
 ## Tech stack
 
@@ -97,7 +97,7 @@ src/
 │   ├── primitive/             Button, Select, Icon, Divider, ArrowNote
 │   └── pages/home/            One component per section
 ├── data/                      All copy and contact details (JSON)
-├── lib/                       Image lookup, mailto builder, price formatter, reveal helper
+├── lib/                       Image lookup, price formatter, reveal helper
 ├── media/images/              Photos and cut-outs
 └── styles/                    Tailwind entry, theme tokens and primitive CSS
 ```

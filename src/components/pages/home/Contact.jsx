@@ -3,28 +3,15 @@ import Button from '../../primitive/Button';
 import Select from '../../primitive/Select';
 import Divider from '../../primitive/Divider';
 import { image } from '../../../lib/images';
-import { mailtoUrl } from '../../../lib/contact';
 import home from '../../../data/home.json';
 import site from '../../../data/site.json';
 import Icon from '../../primitive/Icon';
 import { reveal } from '../../../lib/reveal';
 
-const { title, lede, fields, enquiryTypes, defaultType, submitLabel, sentMessage, plateAlt } = home.contact;
+const { title, lede, fields, enquiryTypes, defaultType, submitLabel, plateAlt } = home.contact;
 
 export default function Contact() {
   const [type, setType] = useState(defaultType);
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    window.location.href = mailtoUrl({
-      to: site.email,
-      subject: `${type} enquiry from ${data.get('name')}`,
-      body: `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nEnquiry type: ${type}\n\n${data.get('message')}`,
-    });
-    setSent(true);
-  };
 
   return (
     <section id="contact" aria-labelledby="contact-title" className="relative isolate -mt-px overflow-clip bg-white">
@@ -92,7 +79,7 @@ export default function Contact() {
           <img src={image('yellow-plate')} alt={plateAlt} width="1241" height="1257" className="block w-full" />
 
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(event) => event.preventDefault()}
             className="absolute left-1/2 top-1/2 w-[60%] -translate-x-1/2 -translate-y-1/2 space-y-3 lg:space-y-3.5"
           >
             <div {...reveal('rise', 0.45)}>
@@ -116,13 +103,10 @@ export default function Contact() {
               </label>
               <textarea id="contact-message" name="message" rows="3" required className="field-input" />
             </div>
-            <div className="flex flex-col items-center gap-2 pt-1" {...reveal('rise', 0.77)}>
-              <Button type="submit" variant="ink">
+            <div className="flex justify-center pt-1" {...reveal('rise', 0.77)}>
+              <Button type="submit" variant="ink" data-demo="Demo form">
                 {submitLabel}
               </Button>
-              <p role="status" className="min-h-5 text-center text-sm font-semibold">
-                {sent ? sentMessage : ''}
-              </p>
             </div>
           </form>
         </div>

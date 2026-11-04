@@ -79,7 +79,8 @@ export default function Hero() {
           alt={plateAlt}
           width="1224"
           height="642"
-          className="relative z-10 mx-auto -mt-[4vw] min-h-0 w-[min(100%,72rem)] flex-1 object-contain pb-6 md:pb-10"
+          data-parallax="16"
+          className="relative z-10 mx-auto -mt-[4vw] min-h-0 w-[min(100%,72rem)] flex-1 [translate:var(--px,0px)_var(--py,0px)] [transform:perspective(900px)_rotateX(var(--rx,0deg))_rotateY(var(--ry,0deg))] transition-[translate,transform] duration-300 ease-out object-contain pb-6 md:pb-10"
           {...reveal('rise', 0.6)}
         />
       </div>

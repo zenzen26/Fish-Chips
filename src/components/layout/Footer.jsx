@@ -1,6 +1,7 @@
 import Icon from '../primitive/Icon';
 import nav from '../../data/nav.json';
 import site from '../../data/site.json';
+import { reveal } from '../../lib/reveal';
 
 const LINK = 'underline-offset-4 hover:underline';
 const ROW = 'flex items-center gap-3';
@@ -19,7 +20,7 @@ function External({ href, children }) {
 export default function Footer() {
   return (
     <footer className="relative isolate overflow-clip bg-black text-white">
-      <div className="mx-auto max-w-[80rem] px-4 pb-8 pt-16 md:pt-20">
+      <div className="mx-auto max-w-[80rem] px-4 pb-8 pt-16 md:pt-20" {...reveal('rise')}>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <p className="display-section text-yellow">{site.name}</p>
@@ -82,7 +83,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-white/20 pt-6 text-sm text-white/70 md:flex-row md:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} {site.name}. {site.disclaimer}
+            &copy; {new Date().getFullYear()} {site.name}
           </p>
           <p>
             Designed and built by <External href={site.portfolio.url}>{site.builtBy}</External>

@@ -1,7 +1,7 @@
 // Margin note with a hand-drawn curved arrow. `flip` mirrors the arrow for a right-hand note.
-export default function ArrowNote({ text, flip = false, className = '' }) {
+export default function ArrowNote({ text, flip = false, className = '', ...rest }) {
   return (
-    <div className={`flex w-40 flex-col xl:w-52 ${flip ? 'items-end text-right' : 'items-start'} ${className}`}>
+    <div className={`flex w-40 flex-col xl:w-52 ${flip ? 'items-end text-right' : 'items-start'} ${className}`} {...rest}>
       <p className="note text-white">{text}</p>
       <svg
         viewBox="0 0 160 100"

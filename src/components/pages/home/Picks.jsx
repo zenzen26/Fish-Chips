@@ -3,8 +3,12 @@ import Button from '../../primitive/Button';
 import { image } from '../../../lib/images';
 import { money } from '../../../lib/money';
 import home from '../../../data/home.json';
+import { reveal } from '../../../lib/reveal';
+import Divider from '../../primitive/Divider';
 
-const { title, lede, items, cta, demoNote, foodAlt } = home.picks;
+const { title, lede, items, cta, foodAlt } = home.picks;
+// The big middle plate lands last.
+const PLATE_DELAYS = [0.1, 0.4, 0.25];
 
 export default function Picks() {
   // Touch screens have no hover: tapping a plate toggles the same lift.
@@ -12,17 +16,20 @@ export default function Picks() {
 
   return (
     <section id="picks" aria-labelledby="picks-title" className="relative isolate overflow-clip grid-bg text-white">
-      <div className="mx-auto max-w-[80rem] px-4 py-16 md:py-24">
-        <h2 id="picks-title" className="display-section">
+      <Divider shape="bite" tone="yellow" />
+      <div className="mx-auto max-w-[80rem] px-4 pb-44 pt-16 md:pb-56 md:pt-24">
+        <h2 id="picks-title" className="display-section" {...reveal('rise')}>
           {title}
         </h2>
-        <p className="lead mt-4 max-w-[40rem]">{lede}</p>
+        <p className="lead mt-4 max-w-[40rem]" {...reveal('rise', 0.1)}>
+          {lede}
+        </p>
 
         <ul className="mt-16 grid gap-16 md:mt-24 md:grid-cols-[1fr_1.25fr_1fr] md:items-end md:gap-6">
           {items.map((item, index) => {
             const on = active === index;
             return (
-              <li key={item.name}>
+              <li key={item.name} {...reveal('rise', PLATE_DELAYS[index])}>
                 <button
                   type="button"
                   aria-pressed={on}
@@ -48,11 +55,10 @@ export default function Picks() {
           })}
         </ul>
 
-        <div className="mt-16 text-center lg:mt-28">
-          <Button to={cta.to}>
+        <div className="mt-16 text-center lg:mt-28" {...reveal('rise', 0.2)}>
+          <Button to={cta.to} data-demo="Demo menu">
             {cta.label}
           </Button>
-          <p className="note mt-6 text-white/70 !text-base">{demoNote}</p>
         </div>
       </div>
     </section>

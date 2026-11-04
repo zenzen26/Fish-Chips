@@ -29,4 +29,14 @@
       6px 16%
     );
   }
+
+  /* Awning bumps rising from the bottom edge of a section. Colour comes from the text colour (text-yellow etc.). */
+  .scallop {
+    @apply [--s:0.75rem] md:[--s:1rem];
+    height: var(--s);
+    background-image: radial-gradient(circle var(--s) at 50% 100%, currentcolor 98%, transparent 100%);
+    background-size: calc(var(--s) * 2) var(--s);
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
 }

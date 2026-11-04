@@ -1,8 +1,10 @@
 import { image } from '../../../lib/images';
 import home from '../../../data/home.json';
 import Icon from '../../primitive/Icon';
+import { reveal } from '../../../lib/reveal';
+import Divider from '../../primitive/Divider';
 
-const { title, lede, items, demoNote, fishAlt } = home.testimonials;
+const { title, lede, items, fishAlt } = home.testimonials;
 const [featured, leftNote, ...rightNotes] = items;
 
 // Slight tilts and offsets so the notes look pinned up by hand. Tilts straighten on hover.
@@ -34,9 +36,9 @@ function Person({ name, role }) {
   );
 }
 
-function Note({ note, className }) {
+function Note({ note, className, delay = 0 }) {
   return (
-    <figure className={`${CARD} p-5 pt-8 md:p-6 md:pt-9 ${className}`}>
+    <figure className={`${CARD} p-5 pt-8 md:p-6 md:pt-9 ${className}`} {...reveal('tilt', delay)}>
       <Tape />
       <Stars rating={note.rating} />
       <blockquote className="mt-3 text-lg font-semibold leading-snug">{note.quote}</blockquote>
@@ -52,9 +54,10 @@ function Tape() {
 export default function Testimonials() {
   return (
     <section id="testimonials" aria-labelledby="testimonials-title" className="relative isolate overflow-clip bg-yellow">
+      <Divider shape="wave" tone="white" />
       <div className="mx-auto max-w-[80rem] px-4 py-16 md:py-24">
         <div className="grid gap-6 px-2 md:px-0 lg:grid-cols-12 lg:items-start lg:gap-x-8 lg:gap-y-10">
-          <header className="mb-8 text-right lg:mb-0 lg:col-span-5 lg:col-start-8 lg:row-start-1">
+          <header className="mb-8 text-right lg:mb-0 lg:col-span-5 lg:col-start-8 lg:row-start-1" {...reveal('rise')}>
             <h2 id="testimonials-title" className="display-section text-blue">
               {title}
             </h2>
@@ -62,7 +65,7 @@ export default function Testimonials() {
           </header>
 
           <div className="lg:col-span-7 lg:row-span-2 lg:row-start-1">
-            <figure className={`${CARD} -rotate-2 p-6 pt-10 md:p-12 md:pt-14`}>
+            <figure className={`${CARD} -rotate-2 p-6 pt-10 md:p-12 md:pt-14`} {...reveal('tilt', 0.1)}>
               <Tape />
               <span className="absolute left-6 top-2 select-none font-display text-[5rem] leading-none text-blue md:left-10 md:text-[9rem]" aria-hidden="true">
                 &ldquo;
@@ -90,18 +93,17 @@ export default function Testimonials() {
             </figure>
 
             <div className="relative z-10 -mt-1 lg:-mt-3 lg:ml-auto lg:w-[82%]">
-              <Note note={leftNote} className={NOTE_STYLES[0]} />
+              <Note note={leftNote} className={NOTE_STYLES[0]} delay={0.25} />
             </div>
           </div>
 
           <div className="grid gap-4 lg:col-span-5 lg:col-start-8 lg:row-start-2 lg:gap-12">
             {rightNotes.map((note, index) => (
-              <Note key={note.name} note={note} className={NOTE_STYLES[index + 1]} />
+              <Note key={note.name} note={note} className={NOTE_STYLES[index + 1]} delay={0.2 + index * 0.15} />
             ))}
           </div>
         </div>
 
-        <p className="note mt-16 text-right text-black/70 !text-base">{demoNote}</p>
       </div>
     </section>
   );

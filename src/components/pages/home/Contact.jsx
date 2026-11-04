@@ -27,6 +27,29 @@ export default function Contact() {
 
   return (
     <section id="contact" aria-labelledby="contact-title" className="relative isolate overflow-clip bg-white">
+      <img
+        src={image('red-checkered-cloth')}
+        alt=""
+        width="1290"
+        height="864"
+        className="absolute left-0 top-0 -z-10 w-[min(62%,20rem)] -scale-y-100 lg:w-[min(30vw,32rem)]"
+        {...reveal('fade', 0.1)}
+      />
+      <img
+        src={image('red-checkered-cloth')}
+        alt=""
+        width="1290"
+        height="864"
+        className="absolute bottom-0 right-0 -z-10 w-[min(70%,22rem)] -scale-x-100 translate-y-[14%] lg:w-[min(50vw,52rem)]"
+        {...reveal('fade', 0.2)}
+      />
+      <img
+        src={image('crayon-fish')}
+        alt=""
+        width="817"
+        height="319"
+        className="fish-swim pointer-events-none absolute right-[8%] top-[5.5rem] hidden w-36 rotate-6 md:block lg:top-24 lg:w-52"
+      />
       <div className="mx-auto max-w-[80rem] px-4 pt-16 text-center md:pt-24">
         <h2 id="contact-title" className="display-section text-blue" {...reveal('rise')}>
           {title}

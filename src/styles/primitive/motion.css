@@ -206,4 +206,21 @@
       translate: 0.5rem 0;
     }
   }
+
+  /* Crayon fish that drifts back and forth across a gap while bobbing. Independent translate/rotate so it keeps its tilt. */
+  .fish-swim {
+    animation: fish-swim 9s ease-in-out infinite alternate;
+  }
+
+  @keyframes fish-swim {
+    0% {
+      translate: -4rem 0.4rem;
+    }
+    50% {
+      translate: 0 -0.5rem;
+    }
+    100% {
+      translate: 4rem 0.3rem;
+    }
+  }
 }

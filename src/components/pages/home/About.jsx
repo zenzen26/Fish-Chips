@@ -25,14 +25,16 @@ export default function About() {
               height="991"
               className="relative w-full"
             />
-            <img
-              src={image('pufferfish')}
-              alt={puffAlt}
-              width="804"
-              height="849"
-              className="absolute left-[7%] top-[3%] w-[82%] -rotate-12"
-              {...reveal('pop', 0.55)}
-            />
+            <div className="puff-bob absolute left-[7%] top-[3%] w-[82%]">
+              <img
+                src={image('pufferfish')}
+                alt={puffAlt}
+                width="804"
+                height="849"
+                className="w-full -rotate-12"
+                {...reveal('pop', 0.55)}
+              />
+            </div>
           </div>
         </div>
 

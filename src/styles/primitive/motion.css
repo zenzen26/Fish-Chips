@@ -10,6 +10,45 @@
     }
   }
 
+  /* Pufferfish mascot: floats around in place with a slight sway. Sits on a wrapper so the photo-frame tilt and the pop reveal stay untouched. */
+  .puff-bob {
+    animation: puff-bob 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes puff-bob {
+    0% {
+      translate: -0.4rem 0.3rem;
+      rotate: -2.5deg;
+    }
+    50% {
+      translate: 0.3rem -0.6rem;
+      rotate: 1deg;
+    }
+    100% {
+      translate: 0.5rem 0.2rem;
+      rotate: 3deg;
+    }
+  }
+
+  /* Shine lines (components/primitive/Rays.jsx): each line draws outward in turn when the surrounding .group is hovered,
+     focused or data-active="true", and fades away when it is not. */
+  .rays path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 0;
+    transition:
+      stroke-dashoffset 0.15s ease-in,
+      opacity 0.15s ease-in;
+  }
+
+  .rays:is(.group:hover *, .group:focus-visible *, .group[data-active='true'] *) path {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transition:
+      stroke-dashoffset 0.3s var(--ease-spring) calc(var(--i) * 0.07s + 0.08s),
+      opacity 0.1s linear calc(var(--i) * 0.07s + 0.08s);
+  }
+
   /* Wave dividers: the svg is twice the section width and slides by exactly one section width, so it loops seamlessly. */
   .wave-drift {
     animation: wave-drift var(--dur, 20s) linear infinite;

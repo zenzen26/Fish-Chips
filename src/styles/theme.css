@@ -5,8 +5,8 @@
   --color-black: #000000;
   --color-white: #ffffff;
 
-  /* Dingo Stamp is not on Google Fonts: used when installed or added via @font-face. Titan One is the stand-in. */
-  --font-display: 'Dingo Stamp', 'Titan One', system-ui, sans-serif;
+  /* Rubik Dirt from the Google Fonts link in index.html (single 400 weight). To self-host later, add an @font-face and drop the link. */
+  --font-display: 'Rubik Dirt', system-ui, sans-serif;
   --font-body: 'Montserrat', system-ui, sans-serif;
 
   /* Ultrawide / dual-monitor: 1920px and wider. Default Tailwind stops at 2xl. */

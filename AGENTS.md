@@ -29,11 +29,11 @@ This supersedes the colour table in PLAN.md.
 
 | Role | Font | Classes |
 | --- | --- | --- |
-| Display | Dingo Stamp (stand-in: Titan One) | `.display-hero`, `.display-section`, `.display-card` (h1/h2/h3 default to it) |
+| Display | Rubik Dirt (Google Fonts, 400 only) | `.display-hero`, `.display-section`, `.display-card` (h1/h2/h3 default to it) |
 | Body / UI / notes | Montserrat 400/700/800, 400 italic | default body, `.lead`, `.ui-label`, `.note` (italic margin note, under about 6 words) |
 
-Dingo Stamp is not on Google Fonts. `--font-display` lists it first, so it is used once installed
-or added with an `@font-face`; until then Titan One (Google Fonts link in `index.html`) shows.
+Rubik Dirt loads from the Google Fonts link in `index.html`; it can be self-hosted later with an `@font-face` (woff2)
+and the link removed. Dingo Stamp was the original pick but is not on Google Fonts.
 The display face is very heavy: short headings, large sizes only. Sizes use `clamp()` in
 `styles/primitive/typography.css`.
 

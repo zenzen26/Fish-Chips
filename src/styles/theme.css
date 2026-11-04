@@ -5,10 +5,8 @@
   --color-black: #000000;
   --color-white: #ffffff;
 
-  /* Rubik Dirt from the Google Fonts link in index.html (single 400 weight). To self-host later, add an @font-face and drop the link. */
-  --font-display: 'Rubik Dirt', system-ui, sans-serif;
-  /* The hero title alone uses the cleaner Titan One: Rubik Dirt's speckle was hard to read at that size. */
-  --font-hero: 'Titan One', system-ui, sans-serif;
+  /* Titan One from the Google Fonts link in index.html (single 400 weight). To self-host later, add an @font-face and drop the link. */
+  --font-display: 'Titan One', system-ui, sans-serif;
   --font-body: 'Montserrat', system-ui, sans-serif;
 
   /* Ultrawide / dual-monitor: 1920px and wider. Default Tailwind stops at 2xl. */

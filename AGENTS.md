@@ -29,12 +29,12 @@ This supersedes the colour table in PLAN.md.
 
 | Role | Font | Classes |
 | --- | --- | --- |
-| Display | Rubik Dirt (Google Fonts, 400 only) | `.display-section`, `.display-card` (h1/h2/h3 default to it) |
-| Hero title | Titan One (`--font-hero`, readable at huge size) | `.display-hero` |
+| Display | Titan One (Google Fonts, 400 only) | `.display-hero`, `.display-section`, `.display-card` (h1/h2/h3 default to it) |
 | Body / UI / notes | Montserrat 400/700/800, 400 italic | default body, `.lead`, `.ui-label`, `.note` (italic margin note, under about 6 words) |
 
-Rubik Dirt loads from the Google Fonts link in `index.html`; it can be self-hosted later with an `@font-face` (woff2)
-and the link removed. Dingo Stamp was the original pick but is not on Google Fonts.
+Titan One loads from the Google Fonts link in `index.html`; it can be self-hosted later with an `@font-face` (woff2)
+and the link removed. Dingo Stamp was the original pick but is not on Google Fonts, and Rubik Dirt was tried and dropped
+(its speckle was hard to read).
 The display face is very heavy: short headings, large sizes only. Sizes use `clamp()` in
 `styles/primitive/typography.css`.
 

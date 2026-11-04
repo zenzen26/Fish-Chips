@@ -3,6 +3,7 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import ScrollEffects from './components/layout/ScrollEffects';
+import DemoTip from './components/layout/DemoTip';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       </Routes>
       <Footer />
       <ScrollEffects />
+      <DemoTip />
     </>
   );
 }

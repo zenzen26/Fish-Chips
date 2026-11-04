@@ -1,7 +1,7 @@
 /* Fish and rubber-hose cursors (public/cursors). Unlayered on purpose: it must beat Tailwind's cursor-pointer utility.
-   Fine pointers only; touch screens have no cursor. Hotspots: fish nose 8 8, glove fingertip 12 2, I-beam centre 11 16. */
+   Fine pointers only; touch screens have no cursor. Hotspots: fish nose 11 11, glove fingertip 12 2, I-beam centre 11 16. */
 html {
-  cursor: url('/cursors/fish.svg') 8 8, auto;
+  cursor: url('/cursors/fish.svg') 11 11, auto;
 }
 
 a[href],
@@ -37,5 +37,5 @@ button:disabled,
 input:disabled,
 textarea:disabled,
 [aria-disabled='true'] {
-  cursor: url('/cursors/disabled.svg') 7 7, not-allowed;
+  cursor: url('/cursors/disabled.svg') 9 9, not-allowed;
 }

@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <g transform="translate(15 15) rotate(45) scale(0.72) translate(-17.5 -16)" stroke="#000" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M25 16L32 8Q30.5 16 32 24Z" fill="#e5e6e3"/>
-    <path d="M11 9.5Q14.5 3 20 6.5L18 10Z" fill="#e5e6e3"/>
-    <ellipse cx="14.5" cy="16" rx="11" ry="7.5" fill="#e5e6e3"/>
-    <path d="M6.6 14H12.4M9.5 11.1V16.9" fill="none"/>
-    <path d="M5 20Q7.5 18.4 10.5 19.8" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g transform="translate(20 20) rotate(45) scale(0.8) translate(-22 -22)" stroke="#000" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M33 22Q40 15 42 11Q39.5 22 42 33Q40 29 33 22Z" fill="#e5e6e3"/>
+    <path d="M17 12.2Q21.5 2.5 29 8.5L26.8 14.2Z" fill="#e5e6e3"/>
+    <ellipse cx="21" cy="22" rx="15" ry="10.5" fill="#e5e6e3"/>
+    <path d="M26 16.6Q29 22 26 27.4M31 18.2Q33 22 31 25.8" fill="none" stroke-width="2"/>
+    <path d="M9.6 18.4H16.4M13 15V21.8" fill="none"/>
+    <path d="M9 27.4Q12.4 25.6 16.4 27.8" fill="none"/>
   </g>
-  <g stroke="#000" stroke-width="2.2" stroke-linecap="round">
-    <circle cx="23.5" cy="23.5" r="6.2" fill="#fff"/>
-    <path d="M19.1 27.9L27.9 19.1" stroke="#004aad"/>
+  <g stroke="#000" stroke-width="2.4" stroke-linecap="round">
+    <circle cx="32" cy="32" r="7.4" fill="#fff"/>
+    <path d="M26.8 37.2L37.2 26.8" stroke="#004aad"/>
   </g>
 </svg>

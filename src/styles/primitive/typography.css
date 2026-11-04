@@ -7,7 +7,7 @@
   }
 
   .display-hero {
-    @apply leading-[0.78] text-[clamp(4.5rem,min(18vw,17vh),15rem)];
+    @apply font-hero leading-[0.78] text-[clamp(4.5rem,min(18vw,17vh),15rem)];
   }
 
   .display-section {

@@ -41,9 +41,11 @@ Dividers: `Divider` (`components/primitive/Divider.jsx`) breaks the straight cut
 
 Entrance animations: spread `{...reveal(kind, delay)}` (`lib/reveal.js`) on any element. Kinds: rise, drop, left, right, pop, zoom, tilt, spin, fade. `ScrollEffects` adds `.is-in` on first view; keyframes in `styles/primitive/motion.css` only define a `from` state, so elements finish on their own transform. Never use pop/zoom/spin on an element that uses `-scale-x-100` (it would flip mid-animation). Skip elements that already run their own `animation` (e.g. `.fish-bob`). Reduced motion shows everything instantly.
 
-Demo tooltip: put `data-demo="Demo menu"` (any text) on a button or link whose page is not built; clicking it cancels the navigation and pops that text at the cursor (`components/layout/DemoTip.jsx`). Do not write "demo" wording into page copy.
+Demo tooltip: put `data-demo="Demo menu"` (any text) on a button or link whose page is not built. It never navigates; a mouse sees the text in a tooltip that follows the cursor on hover, touch and keyboard see it pop on activation (`components/layout/DemoTip.jsx`). It also gets the disabled cursor.
 
-Icons: `components/primitive/Icon.jsx` is the one icon set (clock, phone, mail, globe, github, linkedin, copy, check, external, menu, close, chevron, star). Add new icons there, never as one-off inline SVG.
+Cursors: fish and rubber-hose SVG cursors in `public/cursors/` (fish = default, hand = links/buttons, click = pressed, type = text fields, disabled = `data-demo`/disabled), wired in `styles/primitive/cursor.css` (unlayered so it beats Tailwind `cursor-pointer`). Do not write "demo" wording into page copy.
+
+Icons: `components/primitive/Icon.jsx` is the one icon set (clock, pin, phone, mail, globe, github, linkedin, copy, check, external, menu, close, chevron, star). Add new icons there, never as one-off inline SVG.
 
 Chrome: `components/layout/Header.jsx` (floating pill header: status pill, centred nav pill with CTA and mobile menu, copy-email pill; nav links in `src/data/nav.json`) and `Footer.jsx` (black footer; site details, portfolio and GitHub links in `src/data/site.json`). Styles: `styles/primitive/chrome.css` (`.pill`, `.nav-link`).
 

@@ -1,0 +1,41 @@
+/* Fish and rubber-hose cursors (public/cursors). Unlayered on purpose: it must beat Tailwind's cursor-pointer utility.
+   Fine pointers only; touch screens have no cursor. Hotspots: fish nose 8 8, glove fingertip 12 2, I-beam centre 11 16. */
+html {
+  cursor: url('/cursors/fish.svg') 8 8, auto;
+}
+
+a[href],
+button,
+summary,
+label[for],
+[role='button'],
+[role='option'],
+[role='combobox'] {
+  cursor: url('/cursors/hand.svg') 12 2, pointer;
+}
+
+a[href]:active,
+button:active,
+summary:active,
+[role='button']:active,
+[role='option']:active,
+[role='combobox']:active {
+  cursor: url('/cursors/click.svg') 12 8, pointer;
+}
+
+input:not([type='checkbox'], [type='radio'], [type='submit'], [type='button'], [type='hidden']),
+textarea {
+  cursor: url('/cursors/type.svg') 11 16, text;
+}
+
+/* Disabled: anything marked data-demo (no page yet), or genuinely disabled. Same specificity or higher than the rules above. */
+a[href][data-demo],
+a[href][data-demo]:active,
+button[data-demo],
+button[data-demo]:active,
+button:disabled,
+input:disabled,
+textarea:disabled,
+[aria-disabled='true'] {
+  cursor: url('/cursors/disabled.svg') 7 7, not-allowed;
+}

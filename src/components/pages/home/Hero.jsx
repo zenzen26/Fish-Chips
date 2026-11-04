@@ -46,7 +46,7 @@ export default function Hero() {
 
       <div className="relative mx-auto flex min-h-0 w-full max-w-[80rem] flex-1 flex-col px-4 pt-[clamp(4rem,12vh,8rem)] text-center">
         <h1 id="hero-title" className="relative z-20 flex flex-col items-center text-yellow">
-          <span className="display-hero relative" {...reveal('drop', 0.15)}>
+          <span className="display-hero relative -rotate-2" {...reveal('drop', 0.15)}>
             {top}
             <svg
               viewBox="-50 -50 100 100"
@@ -66,7 +66,7 @@ export default function Hero() {
           >
             {joiner}
           </span>
-          <span className="display-hero" {...reveal('rise', 0.35)}>
+          <span className="display-hero rotate-2" {...reveal('rise', 0.35)}>
             {bottom}
           </span>
         </h1>

@@ -1,7 +1,7 @@
 {
   "hero": {
     "lines": [
-      "Fish",
+      "Tide",
       "and",
       "Chips"
     ],
@@ -18,7 +18,6 @@
       "Marlo grew up above a harbour-side chip shop, peeling potatoes before school and learning to judge a batter by the sound it makes in the fryer. The pufferfish on our sign was the first thing Marlo ever doodled on an order pad, and it stuck.",
       "After years cooking in other people's kitchens, Marlo opened Tide & Chips with one rule: fry it fresh, serve it hot, and never rush the chips. Come by, say hello and ask for the batter recipe. You won't get it, but you will get an extra lemon wedge."
     ],
-    "demoNote": "Demo story: Marlo and Tide & Chips are made up.",
     "puffAlt": "A pufferfish with big golden eyes, the shop mascot"
   },
   "picks": {
@@ -42,7 +41,6 @@
       "label": "See full menu",
       "to": "/products"
     },
-    "demoNote": "Demo menu: names and prices are made up.",
     "foodAlt": "Battered fish and chips with tartare sauce and a lemon wedge"
   },
   "testimonials": {
@@ -74,13 +72,11 @@
         "rating": 5
       }
     ],
-    "demoNote": "Demo quotes: names and reviews are made up.",
     "fishAlt": "A blue crayon drawing of a fish"
   },
   "contact": {
     "title": "Get in touch",
     "lede": "Booking a party, ordering for the office or just want to say hi? Pull up a chair, fill in the plate and we'll get back to you.",
-    "demoNote": "Demo contact details: the phone number, email and form are made up.",
     "fields": {
       "name": "Your name",
       "email": "Email",

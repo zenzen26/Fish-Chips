@@ -30,6 +30,18 @@
     );
   }
 
+  /* Sticker-style white border that follows a cut-out's transparency (stacked hard drop-shadows, no blur).
+     Shows only while the surrounding .group is hovered, focused or marked data-active="true" (tapped on touch screens).
+     Same filter list in both states so it fades in; the element needs a `transition` utility. */
+  .sticker-outline {
+    filter: drop-shadow(3px 0 0 transparent) drop-shadow(-3px 0 0 transparent) drop-shadow(0 3px 0 transparent)
+      drop-shadow(0 -3px 0 transparent);
+  }
+
+  .sticker-outline:is(.group:hover *, .group:focus-visible *, .group[data-active='true'] *) {
+    filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff);
+  }
+
   /* Awning bumps rising from the bottom edge of a section. Colour comes from the text colour (text-yellow etc.). */
   .scallop {
     @apply [--s:0.75rem] md:[--s:1rem];

@@ -5,6 +5,7 @@ import { money } from '../../../lib/money';
 import home from '../../../data/home.json';
 import { reveal } from '../../../lib/reveal';
 import Divider from '../../primitive/Divider';
+import Rays from '../../primitive/Rays';
 
 const { title, lede, items, cta, foodAlt } = home.picks;
 // The big middle plate lands last.
@@ -44,8 +45,10 @@ export default function Picks() {
                       alt={foodAlt}
                       width="550"
                       height="316"
-                      className="absolute left-[4%] top-[-14%] w-[92%] transition duration-500 ease-(--ease-spring) group-hover:-translate-y-4 group-hover:scale-110 group-focus-visible:-translate-y-4 group-focus-visible:scale-110 group-data-[active=true]:-translate-y-4 group-data-[active=true]:scale-110"
+                      className="sticker-outline absolute left-[4%] top-[-14%] w-[92%] transition duration-500 ease-(--ease-spring) group-hover:-translate-y-4 group-hover:scale-110 group-focus-visible:-translate-y-4 group-focus-visible:scale-110 group-data-[active=true]:-translate-y-4 group-data-[active=true]:scale-110"
                     />
+                    <Rays className="absolute -top-[22%] right-[-1%] z-10 w-[17%] text-yellow" />
+                    <Rays flip className="absolute -top-[22%] left-[-1%] z-10 w-[17%] text-yellow" />
                   </span>
                   <span className="mt-6 block text-xl font-extrabold">{item.name}</span>
                   <span className="mt-1 block font-display text-3xl text-yellow">{money(item.price)}</span>

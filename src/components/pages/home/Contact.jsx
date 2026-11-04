@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../../primitive/Button';
 import Select from '../../primitive/Select';
+import Divider from '../../primitive/Divider';
 import { image } from '../../../lib/images';
 import { mailtoUrl } from '../../../lib/contact';
 import home from '../../../data/home.json';
@@ -43,6 +44,7 @@ export default function Contact() {
         className="absolute bottom-0 right-0 -z-10 w-[min(70%,22rem)] -scale-x-100 translate-y-[14%] lg:w-[min(50vw,52rem)]"
         {...reveal('fade', 0.2)}
       />
+      <Divider shape="wave" tone="white" edge="top" />
       <img
         src={image('crayon-fish')}
         alt=""

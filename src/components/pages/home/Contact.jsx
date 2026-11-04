@@ -33,7 +33,7 @@ export default function Contact() {
         alt=""
         width="1290"
         height="864"
-        className="absolute left-0 top-0 -z-10 w-[min(62%,20rem)] -scale-y-100 lg:w-[min(30vw,32rem)]"
+        className="absolute left-0 top-2 -z-10 w-[min(62%,20rem)] -scale-y-100 lg:w-[min(30vw,32rem)]"
         {...reveal('fade', 0.1)}
       />
       <img

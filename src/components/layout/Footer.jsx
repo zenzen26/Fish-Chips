@@ -44,6 +44,10 @@ export default function Footer() {
             <p className="ui-label text-yellow">Visit</p>
             <ul className="mt-4 grid gap-3">
               <li className={ROW}>
+                <Icon name="pin" className={ICON} />
+                {site.address}
+              </li>
+              <li className={ROW}>
                 <Icon name="clock" className={ICON} />
                 {site.hours}
               </li>

@@ -72,6 +72,18 @@ npm run build     # production build to dist/ (must finish with no warnings)
 npm run preview   # serve the built site
 ```
 
+## Deploying
+
+**GitHub Pages** (served at `https://zenzen26.github.io/Fish-Chips/`): the workflow in
+`.github/workflows/deploy.yml` builds the site with `VITE_BASE=/Fish-Chips/` and publishes `dist/` on every push to `main`.
+In the repo go to **Settings, Pages, Build and deployment** and set **Source** to **GitHub Actions** (not "Deploy from a
+branch", which would serve the unbuilt source and show a blank page).
+
+**Anywhere else** (Vercel, Netlify, a custom domain): just run `npm run build` and publish `dist/`. Without `VITE_BASE` the
+site is built for the domain root, and `vercel.json` already rewrites every path to `index.html`.
+
+Internal links go through `withBase()` in `src/lib/url.js`, and the router uses Vite's base, so the site works at any sub-path.
+
 ## Project structure
 
 ```

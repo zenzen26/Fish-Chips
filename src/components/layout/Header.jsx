@@ -4,6 +4,7 @@ import { image } from '../../lib/images';
 import nav from '../../data/nav.json';
 import site from '../../data/site.json';
 import Icon from '../primitive/Icon';
+import { withBase } from '../../lib/url';
 
 // Marks the nav link whose section sits around the middle of the screen.
 function useActiveSection(ids) {
@@ -64,7 +65,7 @@ export default function Header() {
         </p>
 
         <nav aria-label="Main" className="pill relative flex items-center justify-between gap-1 justify-self-center px-2 py-1.5 max-lg:w-full">
-          <a href="/" aria-label={`${site.name} home`} className="flex shrink-0 items-center gap-2 rounded-full px-2">
+          <a href={withBase('/')} aria-label={`${site.name} home`} className="flex shrink-0 items-center gap-2 rounded-full px-2">
             <img src={image('crayon-fish')} alt="" width="817" height="319" className="w-12" />
             <span className="font-display text-lg uppercase leading-none text-blue lg:hidden">{site.name}</span>
           </a>
@@ -72,14 +73,14 @@ export default function Header() {
           <ul className="hidden items-center gap-1 lg:flex">
             {nav.links.map((link) => (
               <li key={link.id}>
-                <a href={link.href} className="nav-link" aria-current={active === link.id}>
+                <a href={withBase(link.href)} className="nav-link" aria-current={active === link.id}>
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
 
-          <Button href={nav.cta.href} className="hidden !min-h-10 !px-5 !py-2 lg:inline-flex">
+          <Button href={withBase(nav.cta.href)} className="hidden !min-h-10 !px-5 !py-2 lg:inline-flex">
             {nav.cta.label}
           </Button>
 
@@ -100,7 +101,7 @@ export default function Header() {
                 {nav.links.map((link) => (
                   <li key={link.id}>
                     <a
-                      href={link.href}
+                      href={withBase(link.href)}
                       onClick={() => setMenuOpen(false)}
                       className="nav-link block !py-3 !text-base"
                       aria-current={active === link.id}
@@ -110,7 +111,7 @@ export default function Header() {
                   </li>
                 ))}
               </ul>
-              <Button href={nav.cta.href} onClick={() => setMenuOpen(false)} className="mt-4 w-full">
+              <Button href={withBase(nav.cta.href)} onClick={() => setMenuOpen(false)} className="mt-4 w-full">
                 {nav.cta.label}
               </Button>
               <p className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold">

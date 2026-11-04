@@ -1,4 +1,5 @@
 import Icon from '../primitive/Icon';
+import { withBase } from '../../lib/url';
 import nav from '../../data/nav.json';
 import site from '../../data/site.json';
 import { reveal } from '../../lib/reveal';
@@ -32,7 +33,7 @@ export default function Footer() {
             <ul className="mt-4 grid gap-2">
               {nav.links.map((link) => (
                 <li key={link.id}>
-                  <a href={link.href} className={LINK}>
+                  <a href={withBase(link.href)} className={LINK}>
                     {link.label}
                   </a>
                 </li>

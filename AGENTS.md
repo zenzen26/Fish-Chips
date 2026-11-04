@@ -44,6 +44,8 @@ Entrance animations: spread `{...reveal(kind, delay)}` (`lib/reveal.js`) on any 
 
 Demo tooltip: put `data-demo="Demo menu"` (any text) on a button or link whose page is not built. It never navigates; a mouse sees the text in a tooltip that follows the cursor on hover, touch and keyboard see it pop on activation (`components/layout/DemoTip.jsx`). It also gets the disabled cursor.
 
+Base path: the site must work at a sub-path (GitHub Pages serves it at `/Fish-Chips/`, set by `VITE_BASE` in `.github/workflows/deploy.yml`). Wrap internal anchor hrefs in `withBase()` (`src/lib/url.js`); router `Link`s are handled by the `basename` in `main.jsx`. Never hardcode a leading-slash URL in JSX (CSS `url(/...)` and `index.html` paths are rewritten by Vite).
+
 Cursors: fish and rubber-hose SVG cursors in `public/cursors/` (fish = default, hand = links/buttons, click = pressed, type = text fields, disabled = `data-demo`/disabled), wired in `styles/primitive/cursor.css` (unlayered so it beats Tailwind `cursor-pointer`). Do not write "demo" wording into page copy.
 
 Icons: `components/primitive/Icon.jsx` is the one icon set (clock, pin, phone, mail, globe, github, linkedin, copy, check, external, menu, close, chevron, star). Add new icons there, never as one-off inline SVG.

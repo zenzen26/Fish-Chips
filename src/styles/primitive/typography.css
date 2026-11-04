@@ -6,8 +6,15 @@
     @apply font-display font-normal uppercase;
   }
 
+  /* Extruded block shadow: five hard black steps down and to the right, sized in em so it scales with the title. */
   .display-hero {
     @apply leading-[0.78] text-[clamp(4.5rem,min(18vw,17vh),15rem)];
+    text-shadow:
+      0.014em 0.014em 0 var(--color-black),
+      0.028em 0.028em 0 var(--color-black),
+      0.042em 0.042em 0 var(--color-black),
+      0.056em 0.056em 0 var(--color-black),
+      0.07em 0.07em 0 var(--color-black);
   }
 
   .display-section {
